@@ -8,5 +8,7 @@ RUN echo 'deb https://pkg.jenkins.io/debian-stable binary/' > /etc/apt/sources.l
 
 RUN apt-get update && apt-get install jenkins openjdk-11-jdk -y 
 
+EXPOSE 8080
+
 CMD java  -jar  /usr/share/jenkins/jenkins.war 
 
